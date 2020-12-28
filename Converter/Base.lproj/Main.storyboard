@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Temperature-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="TemperatureViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OC3-Pm-3UO">
+                                <rect key="frame" x="20" y="74" width="374" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="x93-Wa-EHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="temperatureEditTextFieldChangedWithTemperatureTextField:" destination="9pv-A4-QxB" eventType="editingChanged" id="Xky-bg-6iY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1E-rd-7fB">
+                                <rect key="frame" x="102" y="153.5" width="210" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert ℃ to ℉"/>
+                                <connections>
+                                    <action selector="celsiusToFarhenheitButton" destination="9pv-A4-QxB" eventType="touchUpInside" id="9FM-fF-Xzw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9h-cc-0H2">
+                                <rect key="frame" x="102" y="211.5" width="210" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert ℉ to ℃"/>
+                                <connections>
+                                    <action selector="farhenheitToCelsiusButton" destination="9pv-A4-QxB" eventType="touchUpInside" id="0Vd-OQ-Khq"/>
+                                </connections>
+                            </button>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYr-N6-4J9">
+                                <rect key="frame" x="207" y="269.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="OC3-Pm-3UO" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="30" id="1Zf-eU-rn8"/>
+                            <constraint firstItem="C9h-cc-0H2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="2y6-YZ-ayg"/>
+                            <constraint firstItem="C9h-cc-0H2" firstAttribute="top" secondItem="o1E-rd-7fB" secondAttribute="bottom" constant="10" id="3MP-Os-8hv"/>
+                            <constraint firstItem="o1E-rd-7fB" firstAttribute="centerX" secondItem="OC3-Pm-3UO" secondAttribute="centerX" id="463-aS-Y2j"/>
+                            <constraint firstItem="oYr-N6-4J9" firstAttribute="top" secondItem="C9h-cc-0H2" secondAttribute="bottom" constant="10" id="480-XG-gqO"/>
+                            <constraint firstItem="C9h-cc-0H2" firstAttribute="top" secondItem="o1E-rd-7fB" secondAttribute="bottom" constant="10" id="FiA-nz-Te2"/>
+                            <constraint firstItem="oYr-N6-4J9" firstAttribute="top" secondItem="C9h-cc-0H2" secondAttribute="bottom" constant="10" id="Ho0-WV-PsH"/>
+                            <constraint firstItem="o1E-rd-7fB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="JcE-eH-E6d"/>
+                            <constraint firstItem="o1E-rd-7fB" firstAttribute="top" secondItem="OC3-Pm-3UO" secondAttribute="bottom" constant="10" id="OdL-5y-jfH"/>
+                            <constraint firstItem="o1E-rd-7fB" firstAttribute="top" secondItem="OC3-Pm-3UO" secondAttribute="bottom" constant="10" id="cPr-Hw-gPD"/>
+                            <constraint firstItem="OC3-Pm-3UO" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="oYP-RM-LXj"/>
+                            <constraint firstItem="oYr-N6-4J9" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sA8-QJ-4TK"/>
+                            <constraint firstItem="oYr-N6-4J9" firstAttribute="centerX" secondItem="OC3-Pm-3UO" secondAttribute="centerX" id="tBh-iG-2Bc"/>
+                            <constraint firstItem="C9h-cc-0H2" firstAttribute="centerX" secondItem="OC3-Pm-3UO" secondAttribute="centerX" id="zLr-fe-N9U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NZs-Ol-Qf5" appends="YES" id="Hdj-Zs-NS1"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temperature" image="temperature" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="temperatureOutputLabel" destination="oYr-N6-4J9" id="Ah8-YQ-ywX"/>
+                        <outlet property="temperatureTextField" destination="OC3-Pm-3UO" id="TiH-u8-f2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NZs-Ol-Qf5">
+                    <connections>
+                        <action selector="clickAwayToDismissKeyboard:" destination="9pv-A4-QxB" id="aOB-e8-sp5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Currency-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="CurrencyViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-4h-f5G">
+                                <rect key="frame" x="20" y="74" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="lbs-7y-d1h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="currencyEditTextFieldChangedWithCurrencyTextField:" destination="8rJ-Kc-sve" eventType="editingChanged" id="dbM-rm-rYp"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-Eq-GYr">
+                                <rect key="frame" x="72" y="154" width="270" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert CAD to USD"/>
+                                <connections>
+                                    <action selector="cadToUsDollarsButton" destination="8rJ-Kc-sve" eventType="touchUpInside" id="j2O-vC-KuW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-bL-Kxs">
+                                <rect key="frame" x="72" y="212" width="270" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert USD to CAD"/>
+                                <connections>
+                                    <action selector="usdToCadDollarsButton" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Ch8-NO-fCu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIJ-Pe-4fK">
+                                <rect key="frame" x="207" y="270" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pnA-Eq-GYr" firstAttribute="top" secondItem="pkE-4h-f5G" secondAttribute="bottom" constant="10" id="HGQ-3a-IhF"/>
+                            <constraint firstItem="pkE-4h-f5G" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="LhS-Vn-lST"/>
+                            <constraint firstItem="pnA-Eq-GYr" firstAttribute="centerX" secondItem="pkE-4h-f5G" secondAttribute="centerX" id="Mut-rh-m7N"/>
+                            <constraint firstItem="rPj-bL-Kxs" firstAttribute="centerX" secondItem="pkE-4h-f5G" secondAttribute="centerX" id="Oaz-ly-kbQ"/>
+                            <constraint firstItem="pnA-Eq-GYr" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="RvK-a4-5Nj"/>
+                            <constraint firstItem="XIJ-Pe-4fK" firstAttribute="centerX" secondItem="pkE-4h-f5G" secondAttribute="centerX" id="SJC-hX-cG8"/>
+                            <constraint firstItem="XIJ-Pe-4fK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="YaH-W8-CKX"/>
+                            <constraint firstItem="pkE-4h-f5G" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="30" id="Zfy-Yb-jHN"/>
+                            <constraint firstItem="rPj-bL-Kxs" firstAttribute="top" secondItem="pnA-Eq-GYr" secondAttribute="bottom" constant="10" id="emm-ia-LqH"/>
+                            <constraint firstItem="XIJ-Pe-4fK" firstAttribute="top" secondItem="rPj-bL-Kxs" secondAttribute="bottom" constant="10" id="qm0-wo-hwa"/>
+                            <constraint firstItem="rPj-bL-Kxs" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="xKV-TJ-p1b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wdU-mB-MEI" appends="YES" id="Cmw-Jd-Nw2"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="dollar" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="currencyOutputLabel" destination="XIJ-Pe-4fK" id="Xka-3W-eec"/>
+                        <outlet property="currencyTextField" destination="pkE-4h-f5G" id="fQk-p2-FV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wdU-mB-MEI">
+                    <connections>
+                        <action selector="clickAwayToDismissKeyboard:" destination="8rJ-Kc-sve" id="8oi-T8-NCL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="749" y="346"/>
+        </scene>
+        <!--Distance-->
+        <scene sceneID="T9C-mk-Ler">
+            <objects>
+                <viewController id="kn6-cj-S5I" customClass="DistanceViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2R-Ya-jio">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="distance" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWs-5D-HJo">
+                                <rect key="frame" x="20" y="74" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="67s-L7-JKF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="distanceEditTextFieldChanged" destination="kn6-cj-S5I" eventType="editingChanged" id="TaU-xl-ga1"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixm-Zj-mwE">
+                                <rect key="frame" x="76.5" y="154" width="261" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert KM to Miles"/>
+                                <connections>
+                                    <action selector="kilometersToMilesButton" destination="kn6-cj-S5I" eventType="touchUpInside" id="0J4-pa-usS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djJ-Nf-ApM">
+                                <rect key="frame" x="76.5" y="212" width="261" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert Miles to KM"/>
+                                <connections>
+                                    <action selector="milesToKilometersButton" destination="kn6-cj-S5I" eventType="touchUpInside" id="jzs-CA-pR1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcW-xD-Y8G">
+                                <rect key="frame" x="207" y="270" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vcW-xD-Y8G" firstAttribute="centerX" secondItem="w2R-Ya-jio" secondAttribute="centerX" id="4cM-k7-e0N"/>
+                            <constraint firstItem="pWs-5D-HJo" firstAttribute="top" secondItem="Ekw-YG-jxk" secondAttribute="top" constant="30" id="4re-hb-cRS"/>
+                            <constraint firstItem="Ixm-Zj-mwE" firstAttribute="centerX" secondItem="pWs-5D-HJo" secondAttribute="centerX" id="7PW-Sb-uID"/>
+                            <constraint firstItem="djJ-Nf-ApM" firstAttribute="centerX" secondItem="pWs-5D-HJo" secondAttribute="centerX" id="AO4-Yp-JAI"/>
+                            <constraint firstItem="djJ-Nf-ApM" firstAttribute="top" secondItem="Ixm-Zj-mwE" secondAttribute="bottom" constant="10" id="BBo-mv-ryd"/>
+                            <constraint firstItem="pWs-5D-HJo" firstAttribute="centerX" secondItem="w2R-Ya-jio" secondAttribute="centerX" id="UCc-7f-2Kj"/>
+                            <constraint firstItem="vcW-xD-Y8G" firstAttribute="centerX" secondItem="pWs-5D-HJo" secondAttribute="centerX" id="Vud-qy-N8Z"/>
+                            <constraint firstItem="Ixm-Zj-mwE" firstAttribute="centerX" secondItem="w2R-Ya-jio" secondAttribute="centerX" id="qLv-6s-ODi"/>
+                            <constraint firstItem="Ixm-Zj-mwE" firstAttribute="top" secondItem="pWs-5D-HJo" secondAttribute="bottom" constant="10" id="x18-3U-ets"/>
+                            <constraint firstItem="djJ-Nf-ApM" firstAttribute="centerX" secondItem="w2R-Ya-jio" secondAttribute="centerX" id="yU0-ci-Bzf"/>
+                            <constraint firstItem="vcW-xD-Y8G" firstAttribute="top" secondItem="djJ-Nf-ApM" secondAttribute="bottom" constant="10" id="yvf-ud-QDN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ekw-YG-jxk"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="D2f-gI-snx" appends="YES" id="T6R-70-Ti3"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Distance" image="ruler" id="kaT-iG-JlD"/>
+                    <connections>
+                        <outlet property="distanceOutputLabel" destination="vcW-xD-Y8G" id="NKN-PY-ZtD"/>
+                        <outlet property="distanceTextField" destination="pWs-5D-HJo" id="xuf-wP-Knb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="120-R9-G9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="D2f-gI-snx">
+                    <connections>
+                        <action selector="clickAwayToDismissKeyboard:" destination="kn6-cj-S5I" id="TQu-eN-MSD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1476.8115942028987" y="0.0"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="kn6-cj-S5I" kind="relationship" relationship="viewControllers" id="qCJ-iF-Xa2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollar" width="25" height="25"/>
+        <image name="ruler" width="25" height="25"/>
+        <image name="temperature" width="48.5" height="32.5"/>
+    </resources>
+</document>
